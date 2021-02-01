@@ -1,0 +1,26 @@
+{% extends 'usermanager/baselogged.html' %}
+
+{% block content %}
+
+
+
+        <div style="background-color:black;color:white; text-align:center;padding:1px;">
+            <p><h2>Searched Results</h2></p>
+            </div>
+
+             {% if alluser%}
+                        <div class="row" >
+                            {% for x in alluser %}
+                                <div class="col-sm-3">
+                                    <div class="card m-5">
+                                        <img src="{{x.photo.url}}" alt="User" class="card-img-top" height="200px">
+                                        <h3 align="center">{{x.name}}</h3>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+            {% else %}
+                <h1 align="center">No Results Found !</h1>
+             {% endif %}
+
+    {% endblock %}
