@@ -7,7 +7,7 @@ SECRET_KEY = '15rv9wrv4yw&4$(_ny&0)(-06$hm_d%_9h83xfjl4zb78@v_jb'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://humsafar99.herokuapp.com/']
+ALLOWED_HOSTS = ['*','https://humsafar99.herokuapp.com/']
 
 
 INSTALLED_APPS = [
@@ -95,6 +95,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 django_heroku.settings(locals())
