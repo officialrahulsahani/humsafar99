@@ -7,6 +7,37 @@
         </div>
 
 
+        <div class="row" >
+            {% for x in female%}
+                <div class="col-sm-3">
+                    <div class="card m-5">
+                        <img src="{{x.photo.url}}" alt="User" class="card-img-top" height="200px">
+                        <h4 align="center">{{x.name}}</h4>
+                        <h6 align="center">Age : {{x.age}}</h6>
+                        <h6 align="center">DOB : {{x.dob}}</h6>
+                        <h6 align="center">Religion : {{x.religion}}</h6>
+                        <h6 align="center">Caste : {{x.caste}}</h6>
+                        <h6 align="center">Education : {{x.qualification}}</h6>
+                    </div>
+                </div>
+            {% endfor %}
+            {% for x in male%}
+                <div class="col-sm-3">
+                    <div class="card m-5">
+                        <img src="{{x.photo.url}}" alt="User" class="card-img-top" height="200px">
+                        <h4 align="center">{{x.name}}</h4>
+                        <h6 align="center">Age : {{x.age}}</h6>
+                        <h6 align="center">DOB : {{x.dob}}</h6>
+                        <h6 align="center">Religion : {{x.religion}}</h6>
+                        <h6 align="center">Caste : {{x.caste}}</h6>
+                        <h6 align="center">Education : {{x.qualification}}</h6>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+
+
         <div class="jumbotron">
               <h1 class="display-4">Heartily Welcome To Humsafar99!</h1>
               <p class="lead">Our Best Wishes To You.</p>
@@ -35,19 +66,7 @@
                 color:rgb(56, 162, 233)
             }
         </style>
-        <div class="fut"><p><b>Follow us on</b></p></div>
-        <div class="centerdiv">
-            
-            <a href="https://www.instagram.com/hamsafar_99_matrimonial/" >
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/Hamsafar99-104014918258027" >
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://twitter.com/HumsafarMatrim1">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </div>
+        
         
 
        
