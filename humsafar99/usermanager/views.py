@@ -16,6 +16,12 @@ def terms(request):
 def about(request):
     return render(request, 'usermanager/about.html')
 
+def contact(request):
+    return render(request, 'usermanager/contact.html')
+
+def payment(request):
+    return render(request, 'usermanager/payment.html')
+
 def plans(request):
     return render(request, 'usermanager/plans.html')
 
@@ -29,7 +35,9 @@ def home(request):
     # if form.is_valid():
     #     form.save()
     #     return render(request, 'usermanager/.html', {"form": form})
-    return render(request, 'usermanager/home.html', {"form": form})
+    female = User.objects.all().filter(gender="Femal")[:6]
+    male = User.objects.all().filter(gender="Male")[:2]
+    return render(request, 'usermanager/home.html', {"form": form, 'female':female, 'male':male})
 
 def login(request):
     global logstatus
@@ -94,7 +102,7 @@ def editprofile(request):
 
 def profile(request):
     if checklogin():
-        social = User.objects.all()[:30]
+        social = User.objects.all()[:50]
         login_status = request.session['login_status']
         if (login_status == "1"):
             return render(request, 'usermanager/profile.html', {"b": b, "social": social})
